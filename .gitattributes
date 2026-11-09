@@ -1,0 +1,11 @@
+# 统一按 LF 入库，避免 Windows 下 CRLF 破坏 Dockerfile / shell 脚本
+* text=auto eol=lf
+
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.whl binary
+*.gz binary

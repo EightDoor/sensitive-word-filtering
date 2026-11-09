@@ -1,0 +1,24 @@
+[project]
+name = "sensitive-word-filtering"
+version = "0.1.0"
+description = "独立敏感词检测 API 服务：pyahocorasick 自动机 + houbb 中文词库"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fastapi==0.140.0",
+    "pydantic==2.13.4",
+    "uvicorn==0.51.0",
+    "pyahocorasick==2.3.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+    "httpx>=0.28.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.28"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

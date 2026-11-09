@@ -1,0 +1,13 @@
+.venv/
+.env
+.env.*
+__pycache__/
+*.pyc
+*.pyo
+tests/
+openspec/
+build/
+.git/
+.pytest_cache/
+*.log
+*.tmp

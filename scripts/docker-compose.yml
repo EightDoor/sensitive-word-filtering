@@ -1,0 +1,14 @@
+services:
+  sensitive-word-filtering:
+    image: sensitive-word-filtering:${TAG:?TAG is required（由构建脚本写入 .env.example，首次 start 自动生成 .env）}
+    container_name: sensitive-word-filtering
+    env_file:
+      - .env
+    ports:
+      - "${HOST_BIND:-127.0.0.1}:${HOST_PORT:-8000}:8000"
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
